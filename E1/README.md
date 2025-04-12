@@ -28,7 +28,7 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
         - Producto con mayor recaudación.
         - Clientes ordenados por facturación.
 
-### 2. ** ⚙️ Paquetes Principales**
+### 2. **⚙️ Paquetes Principales**
 - **`utils`**:
     - Gestor de la conexión con la base de datos y operaciones sobre tablas.
 - **`entities`**:
