@@ -59,35 +59,35 @@ public class HelperMySQL {
         this.conn.commit();
     }
 
-    // TODO ver separación foreign keys en Factura_Producto
     public void createTables() throws SQLException {
         String tableCliente = "CREATE TABLE IF NOT EXISTS Cliente(" +
                 "idCliente INT NOT NULL, " +
                 "nombre VARCHAR(50), " +
                 "email VARCHAR(50), " +
-                "CONSTRAINT Direccion_pk PRIMARY KEY (idCliente));" ;
+                "CONSTRAINT Cliente_pk PRIMARY KEY (idCliente));" ;
         this.conn.prepareStatement(tableCliente).execute();
         this.conn.commit();
         String tableFactura = "CREATE TABLE IF NOT EXISTS Factura(" +
                 "idFactura INT NOT NULL, " +
                 "idCliente INT NOT NULL, " +
-                "CONSTRAINT Persona_pk PRIMARY KEY (idFactura), "+
-                "CONSTRAINT FK_idCliente FOREIGN KEY (idCliente) REFERENCES Cliente (idCliente))";
+                "CONSTRAINT Factura_pk PRIMARY KEY (idFactura), "+
+                "CONSTRAINT FK_idCliente FOREIGN KEY (idCliente) REFERENCES Cliente (idCliente));";
         this.conn.prepareStatement(tableFactura).execute();
         this.conn.commit();
-        String tableProducto = "CREATE TABLE IF NOT EXISTS Producto" +
+        String tableProducto = "CREATE TABLE IF NOT EXISTS Producto (" +
                 "idProducto INT NOT NULL, " +
                 "nombre VARCHAR(50), " +
-                "valor FLOAT, " +
-                "CONSTRAINT Producto_pk PRIMARY KEY (idProducto);";
+                "`valor` FLOAT, " +
+                "CONSTRAINT Producto_pk PRIMARY KEY (idProducto));";
         this.conn.prepareStatement(tableProducto).execute();
         this.conn.commit();
-        String tableFacturaProducto = "CREATE TABLE IF NOT EXISTS Factura_Producto" +
+        String tableFacturaProducto = "CREATE TABLE IF NOT EXISTS Factura_Producto (" +
                 "idFactura INT NOT NULL, " +
                 "idProducto INT NOT NULL, " +
                 "cantidad INT, " +
-                "CONSTRAINT FK_idFactura FOREIGN KEY (idFactura) REFERENCES Factura (idFactura)), " +
-                "CONSTRAINT FK_idProducto FOREIGN KEY (idProducto) REFERENCES Producto (idProducto)), ";
+                "CONSTRAINT FK_idFactura FOREIGN KEY (idFactura) REFERENCES Factura (idFactura), " +
+                "CONSTRAINT FK_idProducto FOREIGN KEY (idProducto) REFERENCES Producto (idProducto)" +
+                ");";
         this.conn.prepareStatement(tableFacturaProducto).execute();
         this.conn.commit();
     }
@@ -95,7 +95,7 @@ public class HelperMySQL {
     private Iterable<CSVRecord> getData(String archivo) throws IOException {
         String path = "src\\main\\resources\\" + archivo;
         Reader in = new FileReader(path);
-        String[] header = {};  // Puedes configurar tu encabezado personalizado aquí si es necesario
+        String[] header = {};
         CSVParser csvParser = CSVFormat.EXCEL.withHeader(header).parse(in);
 
         Iterable<CSVRecord> records = csvParser.getRecords();
@@ -106,7 +106,7 @@ public class HelperMySQL {
         try {
             System.out.println("Populating DB...");
             for(CSVRecord row : getData("clientes.csv")) {
-                if(row.size() >= 3) { // Verificar que hay al menos 3 campos en el CSVRecord
+                if(row.size() >= 3) {
                     String idString = row.get(0);
                     String nombreString = row.get(1);
                     String emailString = row.get(2);
@@ -124,7 +124,7 @@ public class HelperMySQL {
             System.out.println("Clientes insertados");
 
             for (CSVRecord row : getData("facturas.csv")) {
-                if (row.size() >= 2) { // Verificar que hay al menos 2 campos en el CSVRecord
+                if (row.size() >= 2) {
                     String idFacturaString = row.get(0);
                     String idClienteString = row.get(1);
 
@@ -145,7 +145,7 @@ public class HelperMySQL {
             System.out.println("Facturas insertadas");
 
             for (CSVRecord row : getData("productos.csv")) {
-                if (row.size() >= 3) { // Verificar que hay al menos 3 campos en el CSVRecord
+                if (row.size() >= 3) {
                     String idProductoString = row.get(0);
                     String nombre = row.get(1);
                     String valorString = row.get(2);
@@ -167,7 +167,7 @@ public class HelperMySQL {
             System.out.println("Productos insertados");
 
             for (CSVRecord row : getData("facturas-productos.csv")) {
-                if (row.size() >= 3) { // Verificar que hay al menos 3 campos en el CSVRecord
+                if (row.size() >= 3) {
                     String idFacturaString = row.get(0);
                     String idProductoString = row.get(1);
                     String cantidadString = row.get(2);
