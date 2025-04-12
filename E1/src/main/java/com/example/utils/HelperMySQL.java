@@ -1,9 +1,26 @@
 package com.example.utils;
 
-public class HelperMysql {
+import com.example.entities.Cliente;
+import com.example.entities.Factura;
+import com.example.entities.FacturaProducto;
+import com.example.entities.Producto;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class HelperMySQL {
     private Connection conn = null;
 
-    public HelperMySQL() {//Constructor
+    public HelperMySQL () {
         String driver = "com.mysql.cj.jdbc.Driver";
         String uri = "jdbc:mysql://localhost:3306/demodao";
 

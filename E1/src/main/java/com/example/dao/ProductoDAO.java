@@ -1,4 +1,9 @@
 package com.example.dao;
+
+import com.example.entities.Producto;
+
+import java.sql.Connection;
+
 public class ProductoDAO {
     private Connection conn;
 

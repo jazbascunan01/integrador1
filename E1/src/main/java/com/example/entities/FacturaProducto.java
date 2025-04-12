@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.entities;
 
 public class FacturaProducto {
     private int idFactura;
