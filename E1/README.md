@@ -148,5 +148,3 @@ A continuación, se describen los archivos y su propósito en el proyecto:
     - El sistema emplea commits y rollbacks para mantener una conexión estable y evitar inconsistencias.
 
 ---
-
-Si necesitas más detalles sobre algún componente o cómo implementar nuevas características, no dudes en preguntar 😊.
