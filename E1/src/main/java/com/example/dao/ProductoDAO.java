@@ -16,41 +16,34 @@ public class ProductoDAO {
     }
 
     public ProductoDTO getProductoConMayorRecaudacion() {
-        String query = "SELECT p.idProducto, p.nombre, p.valor, fp.cantidad " +
+        String query = "SELECT p.idProducto, p.nombre, p.valor, SUM(fp.cantidad * p.valor) AS recaudacion " +
                 "FROM Producto p " +
-                "JOIN Factura_Producto fp on p.idProducto = fp.idProducto;";
-        ProductoDTO result = null;
+                "JOIN Factura_Producto fp ON p.idProducto = fp.idProducto " +
+                "GROUP BY p.idProducto, p.nombre, p.valor " +
+                "ORDER BY recaudacion DESC " +
+                "LIMIT 1";
 
-        Double recaudacionMax = 0.0;
+        ProductoDTO result = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
+
         try {
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
 
-            while(rs.next()) {
-                int idProducto = rs.getInt("idProducto");
+            if (rs.next()) {
                 String nombre = rs.getString("nombre");
                 float valor = rs.getFloat("valor");
-                int cantidad = rs.getInt("cantidad");
+                double recaudacion = rs.getDouble("recaudacion");
 
-                Double recaudacion = (double) (valor * cantidad);
-                ProductoDTO producto = new ProductoDTO(nombre, valor, recaudacion);
-
-                if(recaudacion > recaudacionMax) {
-                    recaudacionMax = recaudacion;
-                    result = producto;
-                }
+                result = new ProductoDTO(nombre, valor, recaudacion);
             }
-
 
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
-                if (ps != null) {
-                    ps.close();
-                }
+                if (ps != null) ps.close();
                 conn.commit();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -59,4 +52,5 @@ public class ProductoDAO {
 
         return result;
     }
+
 }
