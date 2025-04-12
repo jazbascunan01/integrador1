@@ -1,20 +1,26 @@
-# Proyecto de Gestión de Facturación con JDBC
+# 🎉 Proyecto de Gestión de Facturación con JDBC
 
 Este proyecto es una aplicación de consola basada en Java que emplea JDBC para interactuar con una base de datos MySQL. Está diseñado para gestionar entidades relacionadas con una tienda, incluyendo **Clientes**, **Facturas**, **Productos** y las relaciones entre ellas, como **FacturaProducto**.
 
 ---
 
-## Tabla de Contenidos
-1. [Requisitos](#requisitos)
-2. [Descripción del Proyecto](#descripción-del-proyecto)
-3. [Estructura del Proyecto](#estructura-del-proyecto)
-4. [Ejecución del Proyecto](#ejecución-del-proyecto)
-5. [Archivos y Datos Relevantes](#archivos-y-datos-relevantes)
-6. [Descripción de Funcionalidades](#descripción-de-funcionalidades)
+## 🧑‍🤝‍🧑 Integrantes del Grupo
+- **Bascuñan Jazmín**
+- **Fernández Mateo**
 
 ---
 
-## Requisitos
+## 📑 Tabla de Contenidos
+1. [✅ Requisitos](#-requisitos)
+2. [📖 Descripción del Proyecto](#-descripción-del-proyecto)
+3. [📂 Estructura del Proyecto](#-estructura-del-proyecto)
+4. [⚙️ Ejecución del Proyecto](#️-ejecución-del-proyecto)
+5. [📁 Archivos y Datos Relevantes](#-archivos-y-datos-relevantes)
+6. [🔍 Descripción de Funcionalidades](#-descripción-de-funcionalidades)
+
+---
+
+## ✅ Requisitos
 
 1. **Java**: JDK 11 o superior.
 2. **MySQL**: Una instancia de base de datos MySQL en ejecución.
@@ -24,7 +30,7 @@ Este proyecto es una aplicación de consola basada en Java que emplea JDBC para 
 
 ---
 
-## Descripción del Proyecto
+## 📖 Descripción del Proyecto
 
 El sistema gestiona la creación, eliminación y consulta de las tablas siguientes:
 
@@ -40,38 +46,41 @@ El sistema gestiona la creación, eliminación y consulta de las tablas siguient
 
 ---
 
-## Estructura del Proyecto
+## 📂 Estructura del Proyecto
 
-### 1. **Código Principal**
+### 1. **📌 Código Principal**
 - **`Main.java`**:
     - Contiene el punto de entrada del programa.
-    - Realiza tareas como inicializar la base de datos, poblarla con datos desde archivos CSV, y ejecutar consultas mediante DAOs.
+    - Realiza tareas como:
+        - Inicializar la base de datos.
+        - Poblarla con datos desde archivos CSV.
+        - Ejecutar consultas mediante DAOs.
     - Muestra información como:
         - Producto con mayor recaudación.
         - Clientes ordenados por facturación.
 
-### 2. **Paquete `utils`**
+### 2. **⚙️ Paquete `utils`**
 - **`HelperMySQL`**:
     - Responsable de crear y eliminar tablas.
     - Maneja la conexión con la base de datos.
     - Guarda métodos para poblar la base de datos utilizando los archivos **CSV**.
 
-### 3. **Paquete `entities`**
+### 3. **📦 Paquete `entities`**
 - **`Cliente`**, **`Factura`**, **`Producto`**, **`FacturaProducto`**:
     - Clases que representan las entidades principales de la base de datos.
 
-### 4. **Patrón DAO**
+### 4. **🛠️ Patrón DAO**
 - **Fábrica Abstracta**:
     - `AbstractFactory`: Implementa el patrón de fábrica abstracta para gestionar instancias de DAOs.
     - `MySQLDAOFactory`: Crea instancias específicas de DAOs basados en MySQL.
 
-### 5. **Archivos CSV**
+### 5. **📜 Archivos CSV**
 - `clientes.csv`, `facturas.csv`, `productos.csv`, `facturas-productos.csv`:
     - Contienen datos iniciales para poblar las tablas.
 
 ---
 
-## Ejecución del Proyecto
+## ⚙️ Ejecución del Proyecto
 
 ### Configuración Inicial
 1. Asegúrate de que un servidor MySQL esté corriendo en `localhost` con el nombre de la base de datos `integrador1`.
@@ -95,11 +104,11 @@ El sistema gestiona la creación, eliminación y consulta de las tablas siguient
 
 ---
 
-## Archivos y Datos Relevantes
+## 📁 Archivos y Datos Relevantes
 
 A continuación, se describen los archivos y su propósito en el proyecto:
 
-### **Archivos CSV**
+### **📄 Archivos CSV**
 1. **`clientes.csv`**:
     - Contiene los datos iniciales de los clientes.
     - Columnas: `idCliente`, `nombre`, `email`.
@@ -113,7 +122,7 @@ A continuación, se describen los archivos y su propósito en el proyecto:
     - Relación entre facturas y productos.
     - Columnas: `idFactura`, `idProducto`, `cantidad`.
 
-### **Clases y Componentes Relevantes**
+### **🏷️ Clases y Componentes Relevantes**
 1. **`ClienteDAO`, `FacturaDAO`, `ProductoDAO`**:
     - Acceso a datos para las entidades respectivas.
 2. **`ProductoDTO`, `ClienteDTO`**:
@@ -125,26 +134,26 @@ A continuación, se describen los archivos y su propósito en el proyecto:
 
 ---
 
-## Descripción de Funcionalidades
+## 🔍 Descripción de Funcionalidades
 
-1. **Configuración de la Base de Datos**:
+1. **✅ Configuración de la Base de Datos**:
     - **Creación de tablas**:
         - `createTables()` crea las tablas requeridas con las restricciones apropiadas.
     - **Inserción de datos**:
         - Los datos son insertados al leer los archivos **CSV** usando la librería `commons-csv`.
 
-2. **Consultas y Reportes**:
+2. **📊 Consultas y Reportes**:
     - **Producto con mayor recaudación**:
         - Calcula el producto que más ganancias ha generado, considerando la cantidad en las facturas.
     - **Clientes ordenados por facturación**:
         - Lista de clientes ordenados según el monto total de sus compras.
 
-3. **Gestión de Dependencias**:
+3. **🔗 Gestión de Dependencias**:
     - Implementa las claves foráneas necesarias para las restricciones de integridad:
         - `idCliente` en Factura.
         - `idProducto`, `idFactura` en FacturaProducto.
 
-4. **Manejo Transaccional**:
+4. **🔒 Manejo Transaccional**:
     - El sistema emplea commits y rollbacks para mantener una conexión estable y evitar inconsistencias.
 
 ---
