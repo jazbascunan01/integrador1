@@ -4,33 +4,31 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
 
 ---
 
-## Índice
-1. [Requisitos](#requisitos)
-2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Ejecución del Proyecto](#ejecución-del-proyecto)
-4. [Funcionalidades Principales](#funcionalidades-principales)
+## 🤝 Integrantes del Grupo
+- **Bascuñan Jazmín**
+- **Fernández Mateo**
 
 ---
 
-## Requisitos
-- **Java**: JDK 11 o superior.
-- **MySQL**: Instancia de base de datos en ejecución.
-- **JDBC Driver**: `com.mysql.cj.jdbc.Driver`.
-- **Librerías externas**:
-    - `commons-csv` para procesar archivos **CSV**.
+## ✅ Requisitos
 
+1. **Java**: JDK 11 o superior.
+2. **MySQL**: Una instancia de base de datos MySQL en ejecución.
+3. **JDBC Driver**: `com.mysql.cj.jdbc.Driver` incluido como dependencia.
+4. **Librerías**:
+    - `commons-csv` para procesar los archivos **CSV** (ya incluido en el proyecto).
 ---
 
-## Estructura del Proyecto
+## 📂 Estructura del Proyecto
 
-### Código Principal
+### 1. **📌 Código Principal**
 - **`Main.java`**:
     - Punto de entrada del programa.
     - Inicializa la base de datos, llena las tablas con datos desde CSV y realiza consultas como:
         - Producto con mayor recaudación.
         - Clientes ordenados por facturación.
 
-### Paquetes Principales
+### ** ⚙️ Paquetes Principales**
 - **`utils`**:
     - Gestor de la conexión con la base de datos y operaciones sobre tablas.
 - **`entities`**:
@@ -38,13 +36,13 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
 - **`daos`**:
     - Implementación del patrón DAO con fábricas para manejar operaciones en las distintas tablas.
 
-### Archivos CSV
+### **📜 Archivos CSV**
 - `clientes.csv`, `facturas.csv`, `productos.csv`, `factura-productos.csv`:
     - Datos iniciales para rellenar las tablas de la base de datos.
 
 ---
 
-## Ejecución del Proyecto
+## ⚙️ Ejecución del Proyecto
 
 ### Configuración Inicial
 1. Asegúrate de que tu servidor MySQL esté corriendo en `localhost`.
@@ -68,7 +66,7 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
 
 ---
 
-## Funcionalidades Principales
+## 📖 Funcionalidades Principales
 - Gestión de clientes, productos y facturas en base de datos.
 - Consultas avanzadas, como:
     - Producto con mayores ventas.
