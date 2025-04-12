@@ -1,5 +1,6 @@
 package com.example.dao;
 
+import com.example.dto.ClienteDTO;
 import com.example.entities.Cliente;
 
 import java.sql.Connection;
@@ -15,7 +16,7 @@ public class ClienteDAO {
         this.conn = conn;
     }
 
-    public List<Cliente> getClientesOrdenados() {
+    public List<ClienteDTO> getClientesOrdenados() {
         String query =
                 "SELECT c.nombre, c.email, SUM(fp.cantidad * p.valor) AS total_facturado " +
                         "FROM Cliente c " +
@@ -26,7 +27,7 @@ public class ClienteDAO {
                         "ORDER BY total_facturado DESC";
         PreparedStatement ps = null;
         ResultSet rs = null;
-        List<Cliente> resultado = null;
+        List<ClienteDTO> resultado = null;
         try {
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
@@ -36,7 +37,8 @@ public class ClienteDAO {
                 String email = rs.getString("email");
                 double total = rs.getDouble("total_facturado");
 
-
+                ClienteDTO clienteDTO = new ClienteDTO(nombre,email, total);
+                resultado.add(clienteDTO);
             }
 
         } catch (SQLException e) {

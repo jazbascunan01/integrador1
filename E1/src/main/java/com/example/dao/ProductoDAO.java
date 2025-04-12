@@ -1,5 +1,6 @@
 package com.example.dao;
 
+import com.example.dto.ProductoDTO;
 import com.example.entities.Producto;
 
 import java.sql.Connection;
@@ -14,11 +15,11 @@ public class ProductoDAO {
         this.conn = conn;
     }
 
-    public Producto getProductoConMayorRecaudacion() {
+    public ProductoDTO getProductoConMayorRecaudacion() {
         String query = "SELECT p.idProducto, p.nombre, p.valor, fp.cantidad " +
                 "FROM Producto p " +
                 "JOIN Factura_Producto fp on p.idProducto = fp.idProducto;";
-        Producto result = null;
+        ProductoDTO result = null;
 
         Double recaudacionMax = 0.0;
         PreparedStatement ps = null;
@@ -33,9 +34,9 @@ public class ProductoDAO {
                 float valor = rs.getFloat("valor");
                 int cantidad = rs.getInt("cantidad");
 
-                Producto producto = new Producto(idProducto, nombre, valor);
-
                 Double recaudacion = (double) (valor * cantidad);
+                ProductoDTO producto = new ProductoDTO(nombre, valor, recaudacion);
+
                 if(recaudacion > recaudacionMax) {
                     recaudacionMax = recaudacion;
                     result = producto;
