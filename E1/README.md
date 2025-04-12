@@ -28,7 +28,7 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
         - Producto con mayor recaudación.
         - Clientes ordenados por facturación.
 
-### ** ⚙️ Paquetes Principales**
+### 2. ** ⚙️ Paquetes Principales**
 - **`utils`**:
     - Gestor de la conexión con la base de datos y operaciones sobre tablas.
 - **`entities`**:
@@ -36,7 +36,7 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
 - **`daos`**:
     - Implementación del patrón DAO con fábricas para manejar operaciones en las distintas tablas.
 
-### **📜 Archivos CSV**
+### 3. **📜 Archivos CSV**
 - `clientes.csv`, `facturas.csv`, `productos.csv`, `factura-productos.csv`:
     - Datos iniciales para rellenar las tablas de la base de datos.
 
