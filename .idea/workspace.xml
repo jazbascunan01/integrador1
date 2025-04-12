@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13646042-bcb6-411f-b490-3413a13d5049" name="Changes" comment="Fix: corrección de los errores de clave primaria duplicada">
-      <change beforePath="$PROJECT_DIR$/E1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/E1/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="13646042-bcb6-411f-b490-3413a13d5049" name="Changes" comment="Fix: corrección de los errores de clave primaria duplicada" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

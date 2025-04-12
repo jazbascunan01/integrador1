@@ -4,7 +4,7 @@ Este proyecto es una aplicación de consola basada en Java que emplea JDBC para 
 
 ---
 
-## 👥 Integrantes del Grupo
+## 🤝 Integrantes del Grupo
 - **Bascuñan Jazmín**
 - **Fernández Mateo**
 
