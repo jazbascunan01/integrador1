@@ -11,12 +11,12 @@ Este proyecto es una aplicación de consola basada en Java que emplea JDBC para 
 ---
 
 ## 📑 Tabla de Contenidos
-1. [✅ Requisitos](#-requisitos)
-2. [📖 Descripción del Proyecto](#-descripción-del-proyecto)
-3. [📂 Estructura del Proyecto](#-estructura-del-proyecto)
-4. [⚙️ Ejecución del Proyecto](#️-ejecución-del-proyecto)
-5. [📁 Archivos y Datos Relevantes](#-archivos-y-datos-relevantes)
-6. [🔍 Descripción de Funcionalidades](#-descripción-de-funcionalidades)
+1. [ Requisitos](#-requisitos)
+2. [ Descripción del Proyecto](#-descripción-del-proyecto)
+3. [ Estructura del Proyecto](#-estructura-del-proyecto)
+4. [ Ejecución del Proyecto](#️-ejecución-del-proyecto)
+5. [ Archivos y Datos Relevantes](#-archivos-y-datos-relevantes)
+6. [ Descripción de Funcionalidades](#-descripción-de-funcionalidades)
 
 ---
 
