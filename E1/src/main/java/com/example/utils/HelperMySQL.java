@@ -53,13 +53,22 @@ public class HelperMySQL {
         }
     }
     public void dropTables() throws SQLException {
-        String dropPersona = "DROP TABLE IF EXISTS Persona";
-        this.conn.prepareStatement(dropPersona).execute();
+        String dropFacturasProductos = "DROP TABLE IF EXISTS factura_producto";
+        this.conn.prepareStatement(dropFacturasProductos).execute();
         this.conn.commit();
 
-        String dropDireccion = "DROP TABLE IF EXISTS Direccion";
-        this.conn.prepareStatement(dropDireccion).execute();
+        String dropFacturas = "DROP TABLE IF EXISTS factura";
+        this.conn.prepareStatement(dropFacturas).execute();
         this.conn.commit();
+
+        String dropProductos = "DROP TABLE IF EXISTS producto";
+        this.conn.prepareStatement(dropProductos).execute();
+        this.conn.commit();
+
+        String dropClientes = "DROP TABLE IF EXISTS cliente";
+        this.conn.prepareStatement(dropClientes).execute();
+        this.conn.commit();
+
     }
 
     public void createTables() throws SQLException {
