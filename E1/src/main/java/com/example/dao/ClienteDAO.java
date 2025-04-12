@@ -16,14 +16,28 @@ public class ClienteDAO {
     }
 
     public List<Cliente> getClientesOrdenados() {
-        String query = "SELECT * " +
-                "FROM Cliente ";
+        String query =
+                "SELECT c.nombre, c.email, SUM(fp.cantidad * p.valor) AS total_facturado " +
+                        "FROM Cliente c " +
+                        "JOIN Factura f ON c.idCliente = f.idCliente " +
+                        "JOIN Factura_Producto fp ON f.idFactura = fp.idFactura " +
+                        "JOIN Producto p ON fp.idProducto = p.idProducto " +
+                        "GROUP BY c.idCliente " +
+                        "ORDER BY total_facturado DESC";
         PreparedStatement ps = null;
         ResultSet rs = null;
         List<Cliente> resultado = null;
         try {
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String nombre = rs.getString("nombre");
+                String email = rs.getString("email");
+                double total = rs.getDouble("total_facturado");
+
+
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
