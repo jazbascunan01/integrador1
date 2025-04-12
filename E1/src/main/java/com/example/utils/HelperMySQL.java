@@ -1,5 +1,7 @@
 package com.example.utils;
 
+import com.example.dao.ClienteDAO;
+import com.example.dto.ClienteDTO;
 import com.example.entities.Cliente;
 import com.example.entities.Factura;
 import com.example.entities.FacturaProducto;
@@ -16,6 +18,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class HelperMySQL {
     private Connection conn = null;
@@ -63,7 +66,7 @@ public class HelperMySQL {
         String tableCliente = "CREATE TABLE IF NOT EXISTS Cliente(" +
                 "idCliente INT NOT NULL, " +
                 "nombre VARCHAR(50), " +
-                "email VARCHAR(50), " +
+                "email VARCHAR(100), " +
                 "CONSTRAINT Cliente_pk PRIMARY KEY (idCliente));" ;
         this.conn.prepareStatement(tableCliente).execute();
         this.conn.commit();
@@ -93,7 +96,7 @@ public class HelperMySQL {
     }
 
     private Iterable<CSVRecord> getData(String archivo) throws IOException {
-        String path = "src\\main\\resources\\" + archivo;
+        String path = "E1\\src\\main\\resources\\" + archivo;
         Reader in = new FileReader(path);
         String[] header = {};
         CSVParser csvParser = CSVFormat.EXCEL.withHeader(header).parse(in);

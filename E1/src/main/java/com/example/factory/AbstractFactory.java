@@ -1,6 +1,11 @@
 package com.example.factory;
 
+import com.example.dao.ClienteDAO;
+import com.example.dao.ProductoDAO;
+
 public abstract class AbstractFactory {
+    public abstract ClienteDAO getClienteDAO();
+    public abstract ProductoDAO getProductoDAO();
     public static final int MYSQL_JDBC = 1;
     public static final int DERBY_JDBC = 2;
 

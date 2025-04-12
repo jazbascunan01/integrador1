@@ -1,5 +1,8 @@
 package com.example.factory;
 
+import com.example.dao.ClienteDAO;
+import com.example.dao.ProductoDAO;
+
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,4 +55,13 @@ public class MySQLDAOFactory extends AbstractFactory {
         }
     }
 
+    @Override
+    public ClienteDAO getClienteDAO() {
+        return new ClienteDAO(createConnection());
+    }
+
+    @Override
+    public ProductoDAO getProductoDAO() {
+        return new ProductoDAO(createConnection());
+    }
 }

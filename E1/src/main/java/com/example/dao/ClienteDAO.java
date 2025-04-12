@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteDAO {
@@ -24,10 +25,11 @@ public class ClienteDAO {
                         "JOIN Factura_Producto fp ON f.idFactura = fp.idFactura " +
                         "JOIN Producto p ON fp.idProducto = p.idProducto " +
                         "GROUP BY c.idCliente " +
-                        "ORDER BY total_facturado DESC";
+                        "ORDER BY total_facturado DESC;";
+
         PreparedStatement ps = null;
         ResultSet rs = null;
-        List<ClienteDTO> resultado = null;
+        List<ClienteDTO> resultado = new ArrayList<>();
         try {
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
