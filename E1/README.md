@@ -1,10 +1,10 @@
-# Proyecto de Gestión de Facturación con JDBC
+# 🏢 Proyecto de Gestión de Facturación con JDBC
 
 Este proyecto es una aplicación de consola basada en Java que emplea JDBC para interactuar con una base de datos MySQL. Está diseñado para gestionar entidades relacionadas con una tienda, incluyendo **Clientes**, **Facturas**, **Productos** y las relaciones entre ellas, como **FacturaProducto**.
 
 ---
 
-## Integrantes del Grupo
+## 👥 Integrantes del Grupo
 - **Bascuñan Jazmín**
 - **Fernández Mateo**
 
