@@ -85,13 +85,13 @@ public class ClienteDTO {
         String divider = "├" + "─".repeat(CONTENT_WIDTH + 2) + "┤";
 
         // Agregamos un salto de línea antes y después del cuadro
-        return "\n" +
+        return
                 borderLine + "\n" +
                 titleLine + "\n" +
                 divider + "\n" +
                 nombreLine + "\n" +
                 emailLine + "\n" +
                 totalLine + "\n" +
-                bottomBorder + "\n";
+                bottomBorder;
     }
 }
