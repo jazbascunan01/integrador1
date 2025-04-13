@@ -4,7 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13646042-bcb6-411f-b490-3413a13d5049" name="Changes" comment="Fix: corrección de los errores de clave primaria duplicada" />
+    <list default="true" id="13646042-bcb6-411f-b490-3413a13d5049" name="Changes" comment="Fix: corrección de los errores de clave primaria duplicada">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Entregable1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dao/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/ClienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dao/FacturaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/FacturaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dao/ProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/ProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dto/ClienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/ClienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dto/FacturaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/FacturaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/dto/ProductoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/ProductoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/entities/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entities/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/entities/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entities/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/entities/FacturaProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entities/FacturaProducto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/entities/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entities/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/factory/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/factory/AbstractFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/factory/MySQLDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/factory/MySQLDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/utils/HelperDerby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/utils/HelperDerby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/java/com/example/utils/HelperMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/utils/HelperMySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/resources/clientes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/clientes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/resources/facturas-productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/facturas-productos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/resources/facturas.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/facturas.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/resources/msql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/msql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/src/main/resources/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/productos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/clientes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clientes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dao/ClienteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dao/ClienteDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dao/FacturaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dao/FacturaDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dao/ProductoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dao/ProductoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dto/ClienteDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dto/ClienteDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dto/FacturaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dto/FacturaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/dto/ProductoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dto/ProductoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/entities/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entities/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/entities/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entities/Factura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/entities/FacturaProducto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entities/FacturaProducto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/entities/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entities/Producto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/factory/AbstractFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/factory/AbstractFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/factory/MySQLDAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/factory/MySQLDAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/utils/HelperDerby.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/utils/HelperDerby.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/com/example/utils/HelperMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/utils/HelperMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/facturas-productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facturas-productos.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/facturas.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facturas.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/msql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/msql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E1/target/classes/productos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/productos.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,17 +91,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Cole\3 TUDAI 2\Arquitecturas Web\Entregables\Entregable1" />
@@ -58,7 +111,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Main" />
-      <module name="E1" />
+      <module name="integrador1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
