@@ -4,6 +4,11 @@ Este proyecto es una aplicación en Java que utiliza JDBC para interactuar con u
 
 ---
 
+## 🧑‍💻 Grupo de Trabajo
+Este proyecto fue desarrollado por el **Grupo N° 7**
+
+---
+
 ## 🤝 Integrantes del Grupo
 - **Bascuñan Jazmín**
 - **Fernández Mateo**
