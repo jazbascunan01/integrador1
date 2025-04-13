@@ -18,6 +18,7 @@ public class Main {
         dbMySQL.closeConnection();
 
 
+        System.out.println(formatSeparator());
         AbstractFactory chosenFactory = AbstractFactory.getDAOFactory(1);
         System.out.println(formatTitle("Producto con mayor recaudación:"));
         ProductoDAO productoDAO = chosenFactory.getProductoDAO();

@@ -132,7 +132,9 @@ public class HelperMySQL {
                     }
                 }
             }
-            System.out.println("Clientes insertados");
+            System.out.println("╔══════════════════════════════╗");
+            System.out.println("║    ✅ Clientes insertados    ║");
+            System.out.println("╚══════════════════════════════╝");
 
             for (CSVRecord row : getData("facturas.csv")) {
                 if (row.size() >= 2) {
@@ -153,7 +155,9 @@ public class HelperMySQL {
                 }
             }
 
-            System.out.println("Facturas insertadas");
+            System.out.println("╔══════════════════════════════╗");
+            System.out.println("║    📄 Facturas insertadas    ║");
+            System.out.println("╚══════════════════════════════╝");
 
             for (CSVRecord row : getData("productos.csv")) {
                 if (row.size() >= 3) {
@@ -175,7 +179,10 @@ public class HelperMySQL {
                 }
             }
 
-            System.out.println("Productos insertados");
+            System.out.println("╔══════════════════════════════╗");
+            System.out.println("║    📦 Productos insertados   ║");
+            System.out.println("╚══════════════════════════════╝");
+
 
             for (CSVRecord row : getData("facturas-productos.csv")) {
                 if (row.size() >= 3) {
@@ -198,7 +205,9 @@ public class HelperMySQL {
                 }
             }
 
-            System.out.println("Factura_Producto insertados");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║ ✅ Relación Factura_Producto OK!   ║");
+            System.out.println("╚════════════════════════════════════╝");
 
         } catch (SQLException e) {
             e.printStackTrace();
