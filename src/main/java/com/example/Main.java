@@ -11,6 +11,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        System.out.println("╔════════════════════════════════════════════════════════════════════════════════════╗");
+        System.out.println("║                   Grupo N° 7: Bascuñan Jazmín, Fernández Mateo                     ║");
+        System.out.println("║════════════════════════════════════════════════════════════════════════════════════║");
+        System.out.println("║  ░█▀█░█▀▄░█▀█░█░█░█▀▀░█▀▀░▀█▀░█▀█░░░▀█▀░█▀█░▀█▀░█▀▀░█▀▀░█▀▄░█▀█░█▀▄░█▀█░█▀▄░░░▀█░  ║");
+        System.out.println("║  ░█▀▀░█▀▄░█░█░░█░░█▀▀░█░░░░█░░█░█░░░░█░░█░█░░█░░█▀▀░█░█░█▀▄░█▀█░█░█░█░█░█▀▄░░░░█░  ║");
+        System.out.println("║  ░▀░░░▀░▀░▀▀▀░░▀░░▀▀▀░▀▀▀░░▀░░▀▀▀░░░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀░▀░░░▀▀▀  ║");
+        System.out.println("║════════════════════════════════════════════════════════════════════════════════════║");
+        System.out.println("║                        Carga y Consulta de Datos con JDBC                          ║");
+        System.out.println("╚════════════════════════════════════════════════════════════════════════════════════╝\n");
+
         HelperMySQL dbMySQL = new HelperMySQL();
         dbMySQL.dropTables();
         dbMySQL.createTables();
@@ -58,7 +68,7 @@ public class Main {
                 "╚" + border + "╝";
     }
     public static String formatSeparator() {
-        return "\n" + "═".repeat(50) + "\n";
+        return "\n" + "═".repeat(90) + "\n";
 
     }
 
