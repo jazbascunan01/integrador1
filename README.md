@@ -57,7 +57,7 @@ Este proyecto fue desarrollado por el **Grupo N° 7**
     ```
 3. Actualiza las credenciales de conexión en el código:
     - Usuario: `root`
-    - Contraseña: *(cadena vacía o tu contraseña configurada)*.
+    - Contraseña: *(cadena vacía)*.
 
 ### Ejecución
 1. Compila el proyecto:
