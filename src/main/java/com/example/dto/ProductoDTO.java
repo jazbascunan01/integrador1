@@ -1,4 +1,5 @@
 package com.example.dto;
+
 public class ProductoDTO {
     private String nombre;
     private float valor;

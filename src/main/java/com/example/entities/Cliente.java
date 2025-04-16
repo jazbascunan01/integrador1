@@ -1,4 +1,5 @@
 package com.example.entities;
+
 public class Cliente {
     private int id;
     private String nombre;

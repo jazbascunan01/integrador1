@@ -1,4 +1,5 @@
 package com.example.dto;
+
 public class ClienteDTO {
     private String nombre;
     private String email;

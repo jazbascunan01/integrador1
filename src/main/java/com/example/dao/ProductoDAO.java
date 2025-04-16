@@ -1,7 +1,6 @@
 package com.example.dao;
 
 import com.example.dto.ProductoDTO;
-import com.example.entities.Producto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

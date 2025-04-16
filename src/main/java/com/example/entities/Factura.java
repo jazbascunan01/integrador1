@@ -1,4 +1,5 @@
 package com.example.entities;
+
 public class Factura {
     private int id;
     private int idCliente;

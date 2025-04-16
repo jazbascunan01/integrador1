@@ -1,7 +1,5 @@
 package com.example.utils;
 
-import com.example.dao.ClienteDAO;
-import com.example.dto.ClienteDTO;
 import com.example.entities.Cliente;
 import com.example.entities.Factura;
 import com.example.entities.FacturaProducto;
@@ -18,7 +16,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.List;
 
 public class HelperMySQL {
     private Connection conn = null;
